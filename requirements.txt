@@ -7,3 +7,4 @@ SnowNLP
 emoji
 pyshorteners
 scipy
+line-bot-sdk
