@@ -1,14 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Wed Jun  2 21:16:35 2021
-
-@author: Ivan
-版權屬於「行銷搬進大程式」所有，若有疑問，可聯絡ivanyang0606@gmail.com
-
-Line Bot聊天機器人
-第一章 Line Bot申請與串接
-Line Bot機器人串接與測試
-"""
 #載入LineBot所需要的套件
 from flask import Flask, request, abort
 
@@ -23,11 +13,11 @@ from linebot.models import *
 app = Flask(__name__)
 
 # 必須放上自己的Channel Access Token
-line_bot_api = LineBotApi('你自己的token')
+line_bot_api = LineBotApi('Pi/eTAwBVm3okZPKHNlCOhNRXW0Gv6w6y2H3iNZlUGWwttuJfyc5tpnCZHABJMlsmOvfn/4hkHOBodMWZKSKtF9NlvMsuMU5ixLTRlqjN7PbON0uILi3r7PgXY2i7Nf5sNwmCV1tR9kagXEw1QduyAdB04t89/1O/w1cDnyilFU=')
 # 必須放上自己的Channel Secret
-handler = WebhookHandler('你自己的secret')
+handler = WebhookHandler('8ea0cd9cae47cb9da3d7749c40cdbee4')
 
-line_bot_api.push_message('你自己的ID', TextSendMessage(text='你可以開始了'))
+line_bot_api.push_message('2004945921', TextSendMessage(text='你可以開始了'))
 
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
